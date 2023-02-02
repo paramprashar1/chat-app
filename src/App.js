@@ -3,17 +3,17 @@ import "./App.css";
 import LoginButton from "./components/LoginButton";
 import LogoutButton from "./components/LogoutButton";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import io from "socket.io-client";
 
 function App() {
   return (
     <>
-      <nav className="navbar bg-dark">
-        <div className="container-fluid">
-          <span className="appName">React User Authentication</span>
+      <div style={{ paddingTop: 10, paddingRight: 20, paddingLeft: 20 }}>
+        <LoginButton />
+        <div>
+          <LogoutButton />
         </div>
-      </nav>
-      <LoginButton />
-      <LogoutButton />
+      </div>
     </>
   );
 }
