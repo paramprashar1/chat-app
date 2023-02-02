@@ -3,7 +3,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 import io from "socket.io-client";
 import Chat from "./Chat";
 import "../App.css";
-const socket = io.connect("http://localhost:3001");
+// const socket = io.connect("http://localhost:3001");
+const socket = io(
+  "https://api.render.com/deploy/srv-cfdrdk4gqg45rnuqudsg?key=zk5KbfEA-r4"
+);
 const Profile = () => {
   const { user } = useAuth0();
   const [username, setUsername] = useState("");
